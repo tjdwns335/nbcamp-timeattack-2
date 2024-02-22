@@ -10,9 +10,16 @@ function SearchPage() {
   const userId = null;
 
   // URL의 쿼리 스트링을 변경하는 함수
-  const updateSearch = (userId) => {};
+  const updateSearch = (userId) => { };
 
-  useEffect(() => {}, []);
+  useEffect(async () => {
+    try {
+      const { data } = await postsAxios.get();
+      setPosts(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
 
   const filteredPosts = null;
 
