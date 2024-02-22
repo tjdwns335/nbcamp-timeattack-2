@@ -7,6 +7,7 @@ import SingupPage from "../pages/non-auth/SignupPage"
 import Layout from "../components/layout/Layout";
 import NonAuthLayout from "../components/layout/NonAuthLayout";
 import AuthLayout from "../components/layout/AuthLayout";
+import NotFound from "../pages/default-set/NotFount";
 
 export default function RouterPage() {
   const accessToken = localStorage.getItem("accessToken");
@@ -37,10 +38,8 @@ export default function RouterPage() {
           </Route>
         </>
         }
-
-
         {/* 404 Not Found */}
-        <Route />
+        <Route element={<NotFound />} />
       </Routes>
     </Router>
   );

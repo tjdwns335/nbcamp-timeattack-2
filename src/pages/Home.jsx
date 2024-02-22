@@ -12,8 +12,6 @@ const Home = ({ loginMode }) => {
         <p>{`안녕하세요, ${nickname}님!`}</p> :
         <p>로그인을 해주세요.</p>
       }
-
-
     </div>
   );
 };

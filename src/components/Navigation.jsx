@@ -31,7 +31,7 @@ const Navigation = ({ loginMode }) => {
           <Link to="/">홈 메뉴로</Link>
         </li>
         <li>
-          <Link to="">검색페이지로</Link>
+          <Link to="/search">검색페이지로</Link>
         </li>
         <li>
           <Link to="">권한테스트 페이지로</Link>

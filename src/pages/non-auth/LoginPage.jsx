@@ -20,7 +20,7 @@ const LoginPage = () => {
             id, password
           })
           if (data.success) {
-            const { accessToken, userId, nickname } = data
+            const { accessToken, userId, nickname } = data;
             localStorage.setItem("accessToken", accessToken);
             localStorage.setItem("userId", userId);
             localStorage.setItem("nickname", nickname);
