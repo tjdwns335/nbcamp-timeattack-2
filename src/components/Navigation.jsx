@@ -14,8 +14,6 @@ const Navigation = ({ loginMode }) => {
         <button onClick={() => navigate("/login")}>로그인하러가기</button>
       }
 
-
-
       <ul
         style={{
           listStyle: "none",
@@ -34,7 +32,7 @@ const Navigation = ({ loginMode }) => {
           <Link to="/search">검색페이지로</Link>
         </li>
         <li>
-          <Link to="">권한테스트 페이지로</Link>
+          <Link to="testPage">권한테스트 페이지로</Link>
         </li>
 
         <hr />
