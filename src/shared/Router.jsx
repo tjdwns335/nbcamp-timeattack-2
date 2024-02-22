@@ -23,7 +23,7 @@ export default function RouterPage() {
         </Route>
 
         {/* 로그인 상태가 반드시 아니어야 하는 라우터 */}
-        {loginMode && <>
+        {!loginMode && <>
           <Route element={<NonAuthLayout />}>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SingupPage />} />
@@ -32,7 +32,7 @@ export default function RouterPage() {
 
 
         {/* 로그인이 필요한 라우터 */}
-        {!loginMode && <>
+        {loginMode && <>
           <Route element={<AuthLayout loginMode={loginMode} />}>
             <Route path="/user/:userId" />
           </Route>
