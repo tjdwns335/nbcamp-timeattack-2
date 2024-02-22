@@ -13,7 +13,26 @@ const LoginPage = () => {
       <h1>Login</h1>
       <p>Login page</p>
 
-      <form onSubmit={async (e) => { }}>
+      <form onSubmit={async (e) => {
+        e.preventDefault();
+        try {
+          const { data } = await authApi.post("/login", {
+            id, password
+          })
+          if (data.success) {
+            const { accessToken, userId, nickname } = data
+            localStorage.setItem("accessToken", accessToken);
+            localStorage.setItem("userId", userId);
+            localStorage.setItem("nickname", nickname);
+            setId('');
+            setPassword('');
+            alert("로그인에 성공하였습니다. 메인페이지로 이동할게요");
+            navigate("/");
+          }
+        } catch (error) {
+          alert(error.response.data.message);
+        }
+      }}>
         <div>
           <label htmlFor="id">id</label>
           <input

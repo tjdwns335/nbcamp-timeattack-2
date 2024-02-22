@@ -10,7 +10,8 @@ import NonAuthLayout from "../components/layout/NonAuthLayout";
 import AuthLayout from "../components/layout/AuthLayout";
 
 export default function RouterPage() {
-  const [loginMode, setLoginMode] = useState(false);
+  const accessToken = localStorage.getItem("accessToken");
+  const loginMode = !!accessToken;
   return (
     <Router>
       <Routes>

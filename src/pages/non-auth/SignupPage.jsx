@@ -17,6 +17,20 @@ const SignupPage = () => {
       <form
         onSubmit={async (e) => {
           e.preventDefault();
+          try {
+            const { data } = await authApi.post("/register", {
+              id, password, nickname
+            })
+            if (data.success) {
+              setId('');
+              setPassword('');
+              setNickname('');
+              alert("회원 가입에 성공하였습니다. 로그인 페이지로 이동할게요");
+              navigate("/login");
+            }
+          } catch (error) {
+            alert(error.response.data.message);
+          }
         }}
       >
         <div>
