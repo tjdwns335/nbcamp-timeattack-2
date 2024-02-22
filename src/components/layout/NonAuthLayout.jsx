@@ -9,6 +9,7 @@ const NonAuthLayout = () => {
       <p>로그인이 반드시 안되어있어야 하는 페이지</p>
       <Navigation />
       <main></main>
+      <Outlet />
     </div>
   );
 };

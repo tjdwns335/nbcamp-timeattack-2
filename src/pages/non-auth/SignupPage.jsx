@@ -21,16 +21,31 @@ const SignupPage = () => {
       >
         <div>
           <label htmlFor="id">id</label>
-          <input />
+          <input
+            type="text"
+            name="id"
+            value={id}
+            onChange={(e) => { setId(e.target.value) }}
+          />
         </div>
         <div>
           <label htmlFor="nickname">nickname</label>
-          <input />
+          <input
+            type="text"
+            name="nickname"
+            value={nickname}
+            onChange={(e) => { setNickname(e.target.value) }}
+          />
         </div>
 
         <div>
           <label htmlFor="password">Password</label>
-          <input />
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => { setPassword(e.target.value) }}
+          />
         </div>
 
         <button type="submit">Signup</button>

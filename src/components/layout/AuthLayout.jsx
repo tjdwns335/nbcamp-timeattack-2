@@ -9,6 +9,7 @@ const AuthLayout = () => {
       <p>반드시 로그인이 되어있어야 하는 페이지입니다.</p>
       <Navigation />
       <main></main>
+      <Outlet />
     </div>
   );
 };

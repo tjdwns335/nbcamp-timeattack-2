@@ -13,15 +13,25 @@ const LoginPage = () => {
       <h1>Login</h1>
       <p>Login page</p>
 
-      <form onSubmit={async (e) => {}}>
+      <form onSubmit={async (e) => { }}>
         <div>
           <label htmlFor="id">id</label>
-          <input />
+          <input
+            type="text"
+            name="id"
+            value={id}
+            onChange={(e) => { setId(e.target.value) }}
+          />
         </div>
 
         <div>
           <label htmlFor="password">Password</label>
-          <input />
+          <input
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => { setPassword(e.target.value) }}
+          />
         </div>
 
         <button type="submit">Login</button>
